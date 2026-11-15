@@ -1,0 +1,67 @@
+BLOCK 2 INPUT | Original Block 1 records: 10
+EXPANDED SEARCH | New search records: 80
+EXPANDED SEARCH | Unique papers: 88
+
+====================================================================
+AGENT 5 — SCREENING (TITLE/ABSTRACT + AVAILABLE FULL TEXT)
+====================================================================
+Screened: 88 | Title/abstract excluded: 34
+Full texts retrieved: 19 | Provisional full-text eligible: 19
+Human-confirmed included: 0 | Awaiting review/full text: 35
+  [excluded_title_abstract] The Role of Artificial Intelligence Combined With Digital Cholangioscopy for Indeterm
+  [excluded_title_abstract] Artificial Intelligence-Enhanced Electrocardiography for the Detection of Hypertrophi
+  [excluded_title_abstract] Artificial intelligence for detecting autism spectrum disorder: a systematic review a
+  [excluded_title_abstract] Artificial Intelligence Versus Human Interpretation in Diagnostic Radiology: A System
+  [excluded_title_abstract] Artificial intelligence in breast cancer research: a systematic review and bibliometr
+  [excluded_title_abstract] Mathematical foundations of artificial intelligence in healthcare: a systematic revie
+  [excluded_title_abstract] Selected Abstracts from the SIIM 2026 Annual Meeting of the Society for Imaging Infor
+  [excluded_title_abstract] Artificial intelligence in the diagnosis of deep vein thrombosis: A scoping review.
+NOTE: Provisional eligibility is NOT final inclusion.
+
+====================================================================
+AGENT 6 — EVIDENCE / PICO EXTRACTION
+====================================================================
+Full-text evidence records: 19 (human-confirmed: 0)
+  42953191: Advances in artificial intelligence-driven MRI research in Alzheimer | numeric metric mentions: 10 | provisional_needs_human_check
+  42923513: Innovative approaches: Utilizing artificial intelligence for early d | numeric metric mentions: 12 | provisional_needs_human_check
+  42921322: Artificial Intelligence in Medical Imaging: A Review of Radiodiagnos | numeric metric mentions: 7 | provisional_needs_human_check
+  42738276: Can Artificial Intelligence Really Help? A Practicing Radiologist's  | numeric metric mentions: 10 | provisional_needs_human_check
+  42685611: Decoding cancer with artificial intelligence: Transforming research, | numeric metric mentions: 0 | provisional_needs_human_check
+  42804475: Independent evaluation of machine learning and deep learning models  | numeric metric mentions: 8 | provisional_needs_human_check
+  42404859: Radiomics and Deep Learning: Bridging Breast Cancer Imaging Phenotyp | numeric metric mentions: 12 | provisional_needs_human_check
+  PMC13742044: Multimodal imaging and artificial intelligence for bone tumor diagno | numeric metric mentions: 0 | provisional_needs_human_check
+Each record includes source excerpts; metric mentions are NOT validated pooled study results.
+
+====================================================================
+AGENT 7 — QUADAS-2 QUALITY-APPRAISAL WORKSHEETS
+====================================================================
+QUADAS-2 worksheets created: 19
+Four domains per study: patient selection; index test; reference standard; flow/timing.
+Risk judgments intentionally UNCLEAR until a qualified reviewer evaluates the methods.
+  42953191 — 4/4 domains have supporting text candidates
+  42923513 — 2/4 domains have supporting text candidates
+  42921322 — 2/4 domains have supporting text candidates
+  42738276 — 3/4 domains have supporting text candidates
+  42685611 — 3/4 domains have supporting text candidates
+
+====================================================================
+AGENT 8 — STRUCTURED REVIEW MANUSCRIPT / PRISMA COUNTS
+====================================================================
+Structured manuscript draft created: 19 evidence records; 19 worksheets.
+Human-confirmed included: 0; provisional: 19.
+The manuscript is a provisional scientific draft, not a validated systematic review.
+
+====================================================================
+FINAL CONSISTENCY CHECK — PASSED
+====================================================================
+{
+  "records_screened": 88,
+  "excluded_title_abstract": 34,
+  "human_excluded_full_text": 0,
+  "provisional_full_text_eligible": 19,
+  "human_confirmed_included": 0,
+  "pending_full_text_or_review": 35,
+  "full_texts_retrieved": 19
+}
+Saved outputs to: /content/block2_outputs
+Human review template: block2_outputs/human_review_template.csv

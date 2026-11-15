@@ -1,0 +1,236 @@
+# Artificial Intelligence for Diagnostic Accuracy in Medical Imaging
+## Exploratory systematic review manuscript draft — NOT a validated systematic review
+
+## Abstract
+**Background:** Artificial intelligence is increasingly studied for interpreting medical images. A systematic evidence synthesis requires transparent searches, eligibility decisions, verified outcomes, and methodological appraisal.
+**Objective:** To explore primary studies evaluating AI methods for diagnostic accuracy in medical imaging.
+**Methods:** We combined Block 1 records with an additional Europe PMC search. A rule-based screening agent checked titles and abstracts and attempted open-access full-text retrieval. Other agents collected source excerpts and prepared QUADAS-2 appraisal worksheets. Full eligibility and risk-of-bias judgments were reserved for human reviewers.
+**Results:** 88 unique records were screened; 34 were excluded at title/abstract screening; 19 full texts were retrieved; 19 were provisionally eligible; 35 remained pending; 0 were human-confirmed included. 19 preliminary evidence records and 19 QUADAS-2 worksheets were generated.
+**Conclusion:** The pipeline produces a traceable exploratory draft, but no definitive claim about diagnostic effectiveness can be made without full eligibility verification, validated PICO extraction, and completed risk-of-bias appraisal.
+
+## 1. Introduction
+AI-based image analysis has been investigated across clinical imaging modalities. Reported diagnostic performance can depend on the patient population, imaging modality, reference standard, data provenance, and validation design. The aim of this educational pipeline is to organize candidate evidence for a systematic review; it does not substitute for an independent scientific appraisal.
+
+## 2. Methods
+### 2.1. Research question and eligibility
+Review topic: Artificial intelligence for diagnostic accuracy in medical imaging. The intended target evidence is primary research investigating AI-enabled diagnostic imaging with diagnostic accuracy outcomes. The implemented title/abstract screening heuristics check AI, diagnostic and imaging terms and exclude clear review articles by title. Ambiguous records are not automatically included.
+### 2.2. Search and data sources
+Block 1 supplied the initial papers_for_screening.json records. The additional search queried Europe PMC using the following Boolean query:
+(("artificial intelligence" OR "deep learning" OR "machine learning") AND (diagnos* OR detect*) AND (sensitivity OR specificity OR accuracy) AND (imaging OR radiology OR MRI OR CT OR ultrasound OR mammography)) NOT (REVIEW:Y)
+The core response was requested for abstracts and article metadata. Duplicates were merged using available DOI, PMID, PMCID, or title identifiers.
+### 2.3. Screening and full-text assessment
+Agent 5 used rule-based title/abstract screening and requested available open-access Europe PMC full-text XML for a limited number of candidates. Documents matching topic and study indicators were labeled provisionally eligible, not finally included. Human inclusion/exclusion decisions can be supplied in human_fulltext_decisions.csv.
+### 2.4. Evidence extraction
+Agent 6 identified source excerpts potentially describing populations, AI index tests, reference standards, and diagnostic outcomes. Numerical mentions were extracted by regular expressions and are not validated study-level results.
+### 2.5. Risk of bias
+Agent 7 created QUADAS-2 worksheets for patient selection, index test, reference standard, and flow/timing. All risk-of-bias judgments remain unclear until expert review.
+### 2.6. Evidence synthesis
+Agent 8 organized verified provenance and provisional results into a narrative manuscript. Meta-analysis was not performed because study inclusion and accuracy estimates were not validated.
+
+## 3. Results
+### 3.1. Screening flow (provisional)
+- Unique records screened: 88
+- Excluded at title/abstract stage: 34
+- Open full texts retrieved: 19 (overlaps with the candidate statuses below)
+- Provisionally eligible: 19
+- Human-confirmed included: 0
+- Human-excluded after full text: 0
+- Pending full text or human assessment: 35
+These counts are provisional; they are not a fully verified PRISMA 2020 flow diagram.
+### 3.2. Exploratory evidence records
+19 source-linked records were generated. The passages below are search hits and may describe background literature, training datasets, or subgroup results; they must not be treated as validated estimates.
+
+#### 3.2.1. Advances in artificial intelligence-driven MRI research in Alzheimer's disease.
+Identifier: 42953191; DOI: 10.3389/fneur.2026.1943265; Source: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13714817/fullTextXML
+Eligibility status: provisional_needs_human_check. PICO verification: pending.
+- Population, candidate evidence (Introduction): ns such as memory, language, and executive abilities. This deterioration severely impairs patients’ quality of life and imposes substantial burdens on caregivers and healthcare systems. As the most common form of dementia in old age, AD l
+- Index test, candidate evidence (Introduction): timely intervention critical for slowing disease progression—an unmet clinical need that AI-MRI aims to address. Traditionally, the diagnosis of AD has relied heavily on clinical evaluation and neuropsychological testing, which, wh
+- Reference standard, candidate evidence (Introduction): the hippocampus and entorhinal cortex, which are among the earliest affected areas in AD pathology. Moreover, advanced MRI techniques, including functional MRI (fMRI), diffusion tensor imaging (DTI), and magnetic resonance spectroscopy (M
+- Diagnostic outcome mention, UNVERIFIED: accuracy 95.00% (Construction of semi-automated and automated workflows); excerpt: , the proposed EADCD-TIPAIT technique based on MRI imaging achieved a classification accuracy of 95.00% ( 19 ). The use of multi-center datasets is critical for training robust AI models that generalize well across diver
+
+#### 3.2.2. Innovative approaches: Utilizing artificial intelligence for early diagnosis of main neurodegenerative diseases.
+Identifier: 42923513; DOI: 10.22088/cjim.17.3.517; Source: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13688886/fullTextXML
+Eligibility status: provisional_needs_human_check. PICO verification: pending.
+- Population, candidate evidence (Introduction): ning, treatment, management, and disease prediction. In addition, advances in imaging and image processing technologies have led to increasingly cost-effective and low-risk analysis. Techniques such as Computed Tomography (CT), Positro
+- Index test, candidate evidence (Introduction): ion, and free text and data streams from monitoring devices. In particular, the advent of artificial intelligence has sparked a revolution in the field, enabling rapid and non-invasive screening, treatment, management, and disease predictio
+- Reference standard, candidate evidence (Introduction): cquisition and tissue visualization, including T1 and T2-weighted imagery for anatomy and pathology and Fluid Attenuated Inversion Recovery (FLAIR) ( 2 , 3 ). The management of patients with neuro-oncologic disease increasingly relies on a
+- Diagnostic outcome mention, UNVERIFIED: accuracy 60% (Artificial intelligence applications in neurology); excerpt: autonomously engage in the automatic classification of epilepsy type, exhibiting an accuracy of 60% as compared to clinician accuracy of 62%. Furthermore, AI demonstrates an accuracy of 86% in predicting tumor type and g
+
+#### 3.2.3. Artificial Intelligence in Medical Imaging: A Review of Radiodiagnosis in Indian Perspectives.
+Identifier: 42921322; DOI: 10.1055/s-0046-1827803; Source: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13694145/fullTextXML
+Eligibility status: provisional_needs_human_check. PICO verification: pending.
+- Population, candidate evidence (Introduction): neural networks (CNNs) that learn complex hierarchical representations directly from raw image data without the need for manual feature engineering. 8 9 The pivotal demonstration came at the ImageNet 2012 Large Scale Visual Recognitio
+- Index test, candidate evidence (Introduction): has reshaped the specialty while expanding its clinical reach. 1 The contemporary wave of artificial intelligence (AI) represents not a departure from this trajectory but its most sophisticated expression—one that, unlike prior hardware-dri
+- Reference standard, candidate evidence (Data, Ground Truth, and Representativeness): determine AI performance at least as much as architectural choices—and often more. 34 35 Ground truth derives from one of three sources, each with distinct trade-offs 36 : radiological labels (free-text report mining; scalable but susceptib
+- Diagnostic outcome mention, UNVERIFIED: accuracy 2% (Performance Metrics); excerpt: misleading at low disease prevalence: a model predicting always-normal achieves 98% accuracy at 2% prevalence yet has zero clinical utility. 40 41 Key metrics are summarized in Table 1 . The most overlooked concept is po
+
+#### 3.2.4. Can Artificial Intelligence Really Help? A Practicing Radiologist's Simplified Guide to AI, with a Critical Appraisal of the Use of AI in Cancer-Associated Thromboembolism.
+Identifier: 42738276; DOI: 10.3390/cancers18172753; Source: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13564563/fullTextXML
+Eligibility status: provisional_needs_human_check. PICO verification: pending.
+- Population, candidate evidence (1. Introduction): ng and computer performance have enabled machines to identify complex patterns in medical images with increasing accuracy, and in some cases, claim superhuman performance [ 1 , 2 ]. As of 1 July 2026, there were 1524 FDA-approved AI too
+- Index test, candidate evidence (1. Introduction): AI is being introduced into all aspects of our lives and our practice, promising a monumental advancement in medical practice. Technological a
+- Reference standard, candidate evidence (Stages of Clinical-Grade AI Model Development): nnotation, and splitting—Normalizing intensity and resolution across scanners; annotating ground truth (a rate-limiting, labor-intensive step); augmenting via rotation, flipping, or noise to improve generalization. Data are split into train
+- Diagnostic outcome mention, UNVERIFIED: sensitivity 97.3% (Evidence Grade: Level III (Large Retrospective) for Cancer-Specific Populations); excerpt: study: When applied to routine oncologic staging CTs, the AI algorithm demonstrated sensitivity of 97.3% (95% CI: 85.84–99.93%), specificity of 97.74% (95% CI: 97.14–98.24%), Positive Predictive Value (PPV) 34.62%, and N
+
+#### 3.2.5. Decoding cancer with artificial intelligence: Transforming research, diagnosis, and therapy with future insights.
+Identifier: 42685611; DOI: 10.1016/j.tranon.2026.103006; Source: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13564063/fullTextXML
+Eligibility status: provisional_needs_human_check. PICO verification: pending.
+- Population, candidate evidence (Introduction): g for nearly 10 million deaths annually (1 in 6 deaths) and imposing an immense burden on patients, healthcare systems, and economies [ 1 ]. Additionally, there is no equal distribution of the burden; it is estimated that 70% of the cance
+- Index test, candidate evidence (Introduction): multidimensional data requires innovative computational strategies [ 6 ]. The concept of artificial intelligence (AI) was first introduced in 1956 at the Dartmouth Summer Workshop, where it was broadly described as the idea of creating “thi
+- Reference standard, candidate evidence (Introduction): , diagnosis, and therapy. The integration of AI in medical imaging, genomic analysis, and pathology enhances diagnostic precision and introduces a novel, less invasive approach to cancer screening. This not only boosts the effectiveness of
+- Diagnostic outcome: no numeric metric recognized by the parser.
+
+#### 3.2.6. Independent evaluation of machine learning and deep learning models for breast cancer detection.
+Identifier: 42804475; DOI: 10.1371/journal.pdig.0001747; Source: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13618913/fullTextXML
+Eligibility status: provisional_needs_human_check. PICO verification: pending.
+- Population, candidate evidence (Introduction): ing datasets that are often used to diagnosis breast cancer include the Histopathological dataset, the BreakHis dataset, and the BUSI ultrasound pictures [ 12 , 13 ]. Additionally, the Wisconsin Breast Cancer dataset, the CSAW-CC dataset
+- Index test, candidate evidence (Introduction): s that can complement, but not replace, established clinical diagnostic pathways. Various machine learning strategies have been utilized for prediction and classification of diseases within the domain of structured medical data. Random Fore
+- Reference standard, candidate evidence (Introduction): d to unnecessary anxiety, additional diagnostic procedures, or delays in treatment [ 4 ]. Biopsy is the gold standard for diagnosis, but its invasive nature makes it impractical for use at a population-screening level, which motivates i
+- Diagnostic outcome mention, UNVERIFIED: accuracy 98.00% (SEER breast cancer dataset.); excerpt: malignant cases, as seen by their superior F1 score, precision, and recall. With an accuracy of 98.00% (95% CI [96.94-99.06%]), the Gradient Boosting model performed similarly, indicating strong generalization over the a
+
+#### 3.2.7. Radiomics and Deep Learning: Bridging Breast Cancer Imaging Phenotypes and Genomic Heterogeneity.
+Identifier: 42404859; DOI: 10.2147/bctt.s617698; Source: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13332773/fullTextXML
+Eligibility status: provisional_needs_human_check. PICO verification: pending.
+- Population, candidate evidence (Introduction): therapeutic responses. This heterogeneity manifests both intertumorally, across different patients, and intratumorally, within a single tumor mass. For instance, triple-negative breast cancer (TNBC), which accounts for approximately 15–20
+- Index test, candidate evidence (Introduction): non-invasive and spatially comprehensive tumor profiling. 9 Moreover, the integration of radiomics and deep learning techniques has enhanced the ability to predict clinically relevant outcomes such as axillary lymph node metastasis. 10–12
+- Reference standard, candidate evidence (End-to-End Genomic Prediction Models): matically learn hierarchical representations from raw medical images, such as whole slide histopathology images (WSIs) or dynamic contrast-enhanced magnetic resonance imaging, that correlate with underlying genomic alterations. The direct p
+- Diagnostic outcome mention, UNVERIFIED: accuracy 88% (Feature Selection and Dimensionality Reduction); excerpt: to SVM for optimal feature subset selection and hyperparameter tuning, achieving an accuracy of 88%. 95 This highlights the trend towards integrating multiple feature selection strategies to balance dimensionality reduct
+
+#### 3.2.8. Multimodal imaging and artificial intelligence for bone tumor diagnosis: Comparative performance and emerging technologies
+Identifier: PMC13742044; DOI: not available; Source: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13742044/fullTextXML
+Eligibility status: provisional_needs_human_check. PICO verification: pending.
+- Population, candidate evidence (Why bone Tumors are diagnostically difficult): adily diagnostic intervals lengthen when referral pathways are disrupted [2] . Nationwide cohort analysis demonstrates that management within an expert sarcoma network is associated with both enhanced accuracy and reduced delay [3] , a
+- Index test, candidate evidence (Introduction and clinical relevance): ific claim rather than a survey of available technologies: that the principal obstacle to artificial intelligence in musculoskeletal oncology is not algorithmic capability but the instability of the ground truth against which algorithms are
+- Reference standard, candidate evidence (Introduction and clinical relevance): . 1 , the pathway is inherently nonlinear, involving iterative interaction among imaging, biopsy, and multidisciplinary review [3] . This review is organized around a specific claim rather than a survey of available technologies: that t
+- Diagnostic outcome: no numeric metric recognized by the parser.
+
+#### 3.2.9. Artificial intelligence in spinal fracture imaging: from clinical application to translational promise.
+Identifier: 42923746; DOI: 10.3389/fmed.2026.1916223; Source: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13687950/fullTextXML
+Eligibility status: provisional_needs_human_check. PICO verification: pending.
+- Population, candidate evidence (Introduction): missed subtle abnormalities ( 5 – 7 ). These limitations are especially relevant in older patients, in whom mild osteoporotic vertebral compression fractures (OVCFs) may be obscured by degenerative change, chronic deformity, or multimorbi
+- Index test, candidate evidence (Introduction): ation and secondary fracture prevention ( 5 , 8 – 11 ). Against this clinical background, AI has emerged as a practical strategy for augmenting spinal imaging by automating lesion detection, localization, classification, and quantit
+- Reference standard, candidate evidence (Osteoporotic vertebral compression fractures (OVCF)): e from old fractures on thoracolumbar CT images, using MRI-confirmed bone marrow edema as ground truth for acute fractures. This cross-modal transfer strategy, using MRI findings as training labels to guide CT image analysis, sidesteps the 
+- Diagnostic outcome mention, UNVERIFIED: specificity 92.7% (Osteoporotic vertebral compression fractures (OVCF)); excerpt: accuracy in detecting moderate-to-severe vertebral compression fractures on CT, with specificity of 92.7% and a negative predictive value of 94.8%, helping non-specialist radiologists catch fractures they might otherwise
+
+#### 3.2.10. Artificial intelligence in ovarian cancer prevention and control: a brief review of detection, treatment, and equity (2021-2026).
+Identifier: 42755668; DOI: 10.3389/fonc.2026.1915221; Source: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13581674/fullTextXML
+Eligibility status: provisional_needs_human_check. PICO verification: pending.
+- Population, candidate evidence (Introduction): eds 90% in stage I disease but declines to 25%–30% in advanced stages ( 2 ). About 70% of patients are diagnosed late, reflecting absent effective population screening and limitations in diagnostic pathways ( 2 , 3 ). Clinical evaluation
+- Index test, candidate evidence (Introduction): hat support early detection, molecular stratification, and individualized care ( 3 – 5 ). Artificial intelligence (AI), including machine learning (ML) and deep learning (DL), has emerged as a potential approach to address these gaps rather
+- Reference standard, candidate evidence (Introduction): nancy Algorithm (ROMA), the Risk of Malignancy Index (RMI), computed tomography (CT), and histopathology. These tools are limited by insufficient early-stage sensitivity, false positives, operator dependence, and restricted access to molecu
+- Diagnostic outcome mention, UNVERIFIED: sensitivity 85% (Blood-based and laboratory-based AI models); excerpt: od indicators reported favorable performance ( 17 ). A meta-analysis reported pooled sensitivity of 85%, specificity of 91%, and area under the receiver operating characteristic curve (AUC) of 0.95 for AI-derived blood b
+
+#### 3.2.11. Artificial intelligence in chronic and autoimmune pancreatitis: diagnosis, prognosis, and personalized management.
+Identifier: 42564037; DOI: 10.3389/fmed.2026.1859349; Source: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13441912/fullTextXML
+Eligibility status: provisional_needs_human_check. PICO verification: pending.
+- Population, candidate evidence (Automated diagnosis based on endoscopic ultrasound): sis in primary hospitals. With the development of AI and processing technology of digital image, automated diagnostic methods based on EUS images have gradually emerged ( 19 ). The meta-analysis showed that the overall accuracy of AI-a
+- Index test, candidate evidence (Introduction): t of ongoing progress in the diagnosis and treatment of inflammatory pancreatic diseases, artificial intelligence (AI) methods that combine radiomics, deep learning, and structured clinical data are increasingly being recognized as effectiv
+- Reference standard, candidate evidence (Introduction): standard for diagnosis. But it often limited by sampling errors, insufficient fine needle biopsy materials and difficulty in preserving the complete tissue structure ( 14 ). Importantly, focal AIP and mass-forming inflammatory lesions m
+- Diagnostic outcome mention, UNVERIFIED: AUC 0.847 (Automated diagnosis based on endoscopic ultrasound); excerpt: ificity (both 81%) in differentiating CP from other pancreatic masses in EUS images (AUC 0.847) ( 22 ). The AUC of the model developed by Kuwahara et al. based on EfficientNetV2-L CNN reached 1.00 (0.61–1.00) in the vali
+
+#### 3.2.12. Editorial for the Special Issue "Applications of Biomedical Imaging and Sensing Technologies in Disease Diagnosis".
+Identifier: 42740288; DOI: 10.3390/s26175668; Source: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13568137/fullTextXML
+Eligibility status: provisional_needs_human_check. PICO verification: pending.
+- Population, candidate evidence (1. Introduction): retable, deployable in real clinical environments, and compatible with the constraints of patients, clinicians, hospitals, and embedded platforms. The scope of this Special Issue was therefore intentionally wide. It solicited contribution
+- Index test, candidate evidence (1. Introduction): diagnosis, precisely by linking measurement physics, signal processing, computer vision, artificial intelligence (AI), and clinical decision support. In the past, the main and most frequently encountered challenge was in acquiring diagnosti
+- Reference standard, candidate evidence (2. Biomedical Imaging and Sensing in the Current State of the Art): gorithmic performance closer to that required for clinical utility [ 3 , 4 , 5 ]. Digital pathology has similarly benefited from weakly supervised approaches that are able to exploit whole-slide images at scale without requiring exhaustive
+- Diagnostic outcome: no numeric metric recognized by the parser.
+
+#### 3.2.13. Machine Learning-Based Classification of BI-RADS 4 and BI-RADS 5 Microcalcifications in Mammography Combined with DCE-MRI for Malignant-Benign Discrimination.
+Identifier: 42347143; DOI: 10.3390/tomography12060088; Source: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13306530/fullTextXML
+Eligibility status: provisional_needs_human_check. PICO verification: pending.
+- Population, candidate evidence (1. Introduction): aluation of microcalcifications is heterogeneous; this is likely due to the wide range of patient subgroups (BI-RADS 4a, 4b, and 4c) [ 4 ]. However, the positive predictive value (PPV) of microcalcifications for malignancy ranges from 15
+- Index test, candidate evidence (1. Introduction): s high sensitivity and reduces unnecessary biopsies [ 10 ]. Wang et al. demonstrated that deep learning approaches can effectively differentiate benign and malignant breast lesions containing microcalcifications on mammograms, reporting pro
+- Reference standard, candidate evidence (1. Introduction): fifth edition of the Breast Imaging Reporting and Data System (BI-RADS), updated in 2013, biopsy is recommended for suspicious microcalcifications classified as BI-RADS categories 4 and 5. The evaluation of microcalcifications is hetero
+- Diagnostic outcome mention, UNVERIFIED: accuracy 0.909 (3. Results); excerpt: Regression achieved the highest point estimates among the evaluated models, with an accuracy of 0.909, an F1-score of 0.889, and a ROC-AUC of 1.000 in the internal evaluation. However, because the dataset included only 5
+
+#### 3.2.14. Integration of Artificial Intelligence in Endometrial Cancer Management.
+Identifier: 42725200; DOI: 10.7759/cureus.114356; Source: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13560895/fullTextXML
+Eligibility status: provisional_needs_human_check. PICO verification: pending.
+- Population, candidate evidence (Review): To further validate this strategy, the authors applied a machine learning algorithm to a cohort of 1,550 postmenopausal women. The model demonstrated excellent diagnostic performance, with sensitivity and specificity exceeding 99%. Des
+- Index test, candidate evidence (Introduction and background): g the need for improved risk stratification and personalized management strategies [ 2 ]. Artificial intelligence (AI), a rapidly evolving data-driven discipline encompassing machine learning, deep learning, and advanced computational model
+- Reference standard, candidate evidence (Review): learning", "deep learning", "endometrial cancer", "screening", "diagnosis", "radiomics", "histopathology", "molecular classification", "treatment", and "prognosis". The retrieved articles were screened for their relevance to the objectives 
+- Diagnostic outcome mention, UNVERIFIED: sensitivity 86% (Review); excerpt: ted the diagnostic performance of AI in EC screening. The pooled analysis reported a sensitivity of 86% (95% CI: 79%-90%) and a specificity of 92% (95% CI: 87%-95%), suggesting promising diagnostic accuracy across differ
+
+#### 3.2.15. Mammography datasets and artificial intelligence for breast cancer detection: challenges, bias, and future directions.
+Identifier: 42979260; DOI: 10.3389/frai.2026.1933770; Source: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13728873/fullTextXML
+Eligibility status: provisional_needs_human_check. PICO verification: pending.
+- Population, candidate evidence (Introduction): allenges in analyzing mammograms, including the density of the breast, the quality of the image, the shape of the lesion, and the experience of the radiologist. These challenges often lead to ambiguity in diagnosis, resulting in false-
+- Index test, candidate evidence (Introduction): res, and unnecessary biopsies when clinically indicated. With the advent of automated and AI-assisted systems, an opportunity has emerged to support radiologists in mammographic image analysis, ensuring consistency and accelerating
+- Reference standard, candidate evidence (Study selection): modalities other than digital mammography (e.g., ultrasound, magnetic resonance imaging, histopathology, and thermography) were excluded from the review, as were articles with insufficient methodological descriptions or quantitative evaluat
+- Diagnostic outcome: no numeric metric recognized by the parser.
+
+#### 3.2.16. Editorial: Radiomics and AI-driven deep learning for cancer diagnosis and treatment
+Identifier: PMC13636010; DOI: not available; Source: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13636010/fullTextXML
+Eligibility status: provisional_needs_human_check. PICO verification: pending.
+- Population, candidate evidence (Pretreatment and presurgical risk stratification): LN) burden in stage T3 rectal cancer, with logistic regression outperforming conventional image assessment. A related clinical objective was addressed in breast cancer by Xu et al. , whose study combined B-mode ultrasound and shear-wav
+- Index test, candidate evidence (Pretreatment and presurgical risk stratification): In this research topic, one prominent theme is the use of radiomics and/or habitat-clustering-based ML models to obtain clinically important risk information prior to treatment or surgery. In rectal cancer,
+- Reference standard, candidate evidence (Pretreatment and presurgical risk stratification): fusion coefficient (ADC) and T 2 w images with preoperative clinical variables, including biopsy-derived Gleason grade, serum prostate-specific antigen (PSA), and prostate volume, improved the prediction of adverse pathological features
+- Diagnostic outcome: no numeric metric recognized by the parser.
+
+#### 3.2.17. From image biomarkers to treatment decisions: multimodal AI and clinical translation in gynecologic oncology
+Identifier: PMC13691476; DOI: not available; Source: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13691476/fullTextXML
+Eligibility status: provisional_needs_human_check. PICO verification: pending.
+- Population, candidate evidence (Evolution of advanced imaging and molecular classification): ic variables, subsequently amalgamated within a late-fusion multimodal framework; n = 444 patients with predominantly advanced high-grade serous ovarian cancer treated at a single tertiary center; retrospective, with internal cross-valida
+- Index test, candidate evidence (The central role of AI in gynecologic oncology): Multimodal AI in gynecologic oncology typically develops separate models for imaging, digital pathology, and molecular/clinical data, then integrates the
+- Reference standard, candidate evidence (The central role of AI in gynecologic oncology): imodal AI in gynecologic oncology typically develops separate models for imaging, digital pathology, and molecular/clinical data, then integrates their outputs to improve the accuracy of prognostic and predictive tools. These integrated mo
+- Diagnostic outcome mention, UNVERIFIED: AUC 0.949 (Rationale, novelty, and aim of this review); excerpt: ve model that diagnoses ovarian cancer from routine laboratory tests; it achieved an AUC of 0.949 in an internal validation set (n = 3,007) and 0.882 and 0.884 in two external hospital cohorts (n = 5,641 and n = 2,344). 
+
+#### 3.2.18. Artificial Intelligence for Prognostic Modelling and Adaptive Treatment Monitoring in Radiation Oncology.
+Identifier: 42395225; DOI: 10.7759/cureus.110105; Source: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13325595/fullTextXML
+Eligibility status: provisional_needs_human_check. PICO verification: pending.
+- Population, candidate evidence (Introduction and background): n accurate imaging, pathology correlation, and longitudinal treatment assessment to guide patient-specific radiotherapy decisions. In this setting, artificial intelligence (AI) has moved beyond cancer detection alone and is now being stu
+- Index test, candidate evidence (Introduction and background): l treatment assessment to guide patient-specific radiotherapy decisions. In this setting, artificial intelligence (AI) has moved beyond cancer detection alone and is now being studied for prognosis, target delineation, adaptive treatment pl
+- Reference standard, candidate evidence (Introduction and background): Radiation oncology increasingly depends on accurate imaging, pathology correlation, and longitudinal treatment assessment to guide patient-specific radiotherapy decisions. In this setting, artificial intelligen
+- Diagnostic outcome: no numeric metric recognized by the parser.
+
+#### 3.2.19. Editorial: Based models and machine learning on CT, MRI and PET-CT in head and neck cancer diagnosis, staging and outcome prediction.
+Identifier: 42712618; DOI: 10.3389/fradi.2026.1963901; Source: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13550135/fullTextXML
+Eligibility status: provisional_needs_human_check. PICO verification: pending.
+- Population, candidate evidence (Body): Qin et al. performed a systematic review and meta-analysis of 17 studies involving 3,321 participants for identifying sinonasal inverted papilloma, demonstrating that radiomics-clinical fusion achieves superior diagnostic performance (sensi
+- Index test, candidate evidence (Body): chemotherapy, and immunotherapy— remain the cornerstone of management, the integration of artificial intelligence (AI) into clinical workflows could offer transformative potential for precision oncology ( 2 ). The convergence of large imagi
+- Reference standard: no excerpt identified by the automated rules.
+- Diagnostic outcome mention, UNVERIFIED: sensitivity 0.85 (Body); excerpt: monstrating that radiomics-clinical fusion achieves superior diagnostic performance (sensitivity 0.85, specificity 0.87) compared to imaging alone. Yuan et al. developed a random forest model integrating contrast-enhance
+
+### 3.3. Methodological quality
+19 QUADAS-2 worksheets were prepared. These are not finalized risk-of-bias assessments; judgments remain unclear.
+
+## 4. Discussion
+The prototype demonstrates how screening decisions, document excerpts, and quality-appraisal prompts can be exchanged between specialized agents. The current corpus is heterogeneous and the provisional evidence may include non-primary papers. Screening based on title and keywords cannot verify study design or clinical applicability. Extracted accuracy numbers have not been matched to study cohorts, reference standards, or testing conditions.
+A scientifically interpretable synthesis will require independent screening, manual study confirmation, validated PICO fields, completed QUADAS-2 judgments and reconciliation of duplicate or overlapping study populations. No pooled effect size or comparative diagnostic claim is justified at this stage.
+
+## 5. Limitations
+- No independent dual-reviewer screening has been performed.
+- Only available Europe PMC open-access XML is retrieved; some records remain pending.
+- Study eligibility and PICO details have not been fully validated.
+- QUADAS-2 worksheets provide candidate passages, not expert judgments.
+- The procedure does not perform RAG-based answer generation or a formal meta-analysis.
+- Retrieval counts and corpus contents may vary across different execution dates.
+
+## 6. Conclusion
+PRISMA-Agent Block 2 produced a traceable, structured exploratory review draft from its screening, extraction and appraisal outputs. The implementation demonstrates workflow integration and reproducible file exports but not a validated systematic review. Research conclusions should be postponed until eligibility, data extraction and methodological appraisal are independently confirmed.
+
+## References / studies requiring verification
+The records below were retrieved by the pipeline. Listing a record does not mean it has been included in a completed systematic review.
+1. Advances in artificial intelligence-driven MRI research in Alzheimer's disease.. Identifier: 42953191. DOI: 10.3389/fneur.2026.1943265. https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13714817/fullTextXML
+2. Innovative approaches: Utilizing artificial intelligence for early diagnosis of main neurodegenerative diseases.. Identifier: 42923513. DOI: 10.22088/cjim.17.3.517. https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13688886/fullTextXML
+3. Artificial Intelligence in Medical Imaging: A Review of Radiodiagnosis in Indian Perspectives.. Identifier: 42921322. DOI: 10.1055/s-0046-1827803. https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13694145/fullTextXML
+4. Can Artificial Intelligence Really Help? A Practicing Radiologist's Simplified Guide to AI, with a Critical Appraisal of the Use of AI in Cancer-Associated Thromboembolism.. Identifier: 42738276. DOI: 10.3390/cancers18172753. https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13564563/fullTextXML
+5. Decoding cancer with artificial intelligence: Transforming research, diagnosis, and therapy with future insights.. Identifier: 42685611. DOI: 10.1016/j.tranon.2026.103006. https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13564063/fullTextXML
+6. Independent evaluation of machine learning and deep learning models for breast cancer detection.. Identifier: 42804475. DOI: 10.1371/journal.pdig.0001747. https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13618913/fullTextXML
+7. Radiomics and Deep Learning: Bridging Breast Cancer Imaging Phenotypes and Genomic Heterogeneity.. Identifier: 42404859. DOI: 10.2147/bctt.s617698. https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13332773/fullTextXML
+8. Multimodal imaging and artificial intelligence for bone tumor diagnosis: Comparative performance and emerging technologies. Identifier: PMC13742044. DOI: unavailable. https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13742044/fullTextXML
+9. Artificial intelligence in spinal fracture imaging: from clinical application to translational promise.. Identifier: 42923746. DOI: 10.3389/fmed.2026.1916223. https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13687950/fullTextXML
+10. Artificial intelligence in ovarian cancer prevention and control: a brief review of detection, treatment, and equity (2021-2026).. Identifier: 42755668. DOI: 10.3389/fonc.2026.1915221. https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13581674/fullTextXML
+11. Artificial intelligence in chronic and autoimmune pancreatitis: diagnosis, prognosis, and personalized management.. Identifier: 42564037. DOI: 10.3389/fmed.2026.1859349. https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13441912/fullTextXML
+12. Editorial for the Special Issue "Applications of Biomedical Imaging and Sensing Technologies in Disease Diagnosis".. Identifier: 42740288. DOI: 10.3390/s26175668. https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13568137/fullTextXML
+13. Machine Learning-Based Classification of BI-RADS 4 and BI-RADS 5 Microcalcifications in Mammography Combined with DCE-MRI for Malignant-Benign Discrimination.. Identifier: 42347143. DOI: 10.3390/tomography12060088. https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13306530/fullTextXML
+14. Integration of Artificial Intelligence in Endometrial Cancer Management.. Identifier: 42725200. DOI: 10.7759/cureus.114356. https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13560895/fullTextXML
+15. Mammography datasets and artificial intelligence for breast cancer detection: challenges, bias, and future directions.. Identifier: 42979260. DOI: 10.3389/frai.2026.1933770. https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13728873/fullTextXML
+16. Editorial: Radiomics and AI-driven deep learning for cancer diagnosis and treatment. Identifier: PMC13636010. DOI: unavailable. https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13636010/fullTextXML
+17. From image biomarkers to treatment decisions: multimodal AI and clinical translation in gynecologic oncology. Identifier: PMC13691476. DOI: unavailable. https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13691476/fullTextXML
+18. Artificial Intelligence for Prognostic Modelling and Adaptive Treatment Monitoring in Radiation Oncology.. Identifier: 42395225. DOI: 10.7759/cureus.110105. https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13325595/fullTextXML
+19. Editorial: Based models and machine learning on CT, MRI and PET-CT in head and neck cancer diagnosis, staging and outcome prediction.. Identifier: 42712618. DOI: 10.3389/fradi.2026.1963901. https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13550135/fullTextXML
+
+## Human review required
+Complete human_fulltext_decisions.csv for full-text inclusion/exclusion decisions; verify extracted values and QUADAS-2 judgments separately before reporting final results.
